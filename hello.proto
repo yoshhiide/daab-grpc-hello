@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package hello;
+
+service World {
+  rpc Ping (stream TextMessage) returns (stream TextMessage) {}
+}
+
+message TextMessage {
+  string msg = 1;
+  string roomId = 2;
+}
